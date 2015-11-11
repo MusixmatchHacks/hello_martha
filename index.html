@@ -42,6 +42,12 @@
     ga('send', 'pageview');</script> <script type=text/javascript>SocialShareKit.init();
     Zoomerang.listen('section img');
     Zoomerang.config({
-      'maxWidth': 1500,
-      'maxHeight': 950
-    })</script>  
+      'maxWidth': $(window).width() -10,
+      'maxHeight': $(window).height() -10
+    })
+    window.addEventListener('resize', function(){
+      Zoomerang.config({
+        'maxWidth': $(window).width() -10,
+        'maxHeight': $(window).height() -10
+      })
+    }, true);</script>  
